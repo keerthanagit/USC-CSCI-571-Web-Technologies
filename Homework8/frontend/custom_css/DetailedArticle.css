@@ -1,0 +1,42 @@
+.detailed_article {
+    flex-direction : row !important;
+    width : auto !important;
+    margin : 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.detailed_article_share_icons{
+    display : flex;
+    flex-direction : row !important;
+}
+.detailed_article_img {
+    width : 100%;
+    margin : 0px;
+}
+.detailed_article_title {
+    font-style : italic;
+    font-size : 25px;
+}
+.detailed_article_elements {
+
+    margin : 1%;
+}
+.detailed_article_date {
+    font-style : italic;
+ }
+.detailed_article_links {
+    display : flex;
+    flex-direction : row;
+    justify-content : space-between;
+}
+.expander {
+    font-size : 20px;
+    float : right;
+    cursor : pointer;
+}
+
+.article_description {
+    text-align : justify;
+}
+.no_padding {
+    padding : 0;
+}

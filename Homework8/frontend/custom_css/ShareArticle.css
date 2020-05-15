@@ -1,0 +1,14 @@
+.share_icon {
+     margin: 7px;
+}
+.search_result_share_icons {
+    display : flex;
+    flex-direction : row;
+    justify-content: space-around;
+}
+.share_via {
+    text-align : center;
+}
+.share_div {
+    display : inline
+}
