@@ -1,0 +1,88 @@
+body
+{	
+	text-align:center;
+	font-family: Georgia;	
+}
+#empty
+{
+	width:610px;
+	margin:auto;
+}
+
+#heading 
+{	
+	width: 500px;
+	height:80px;
+	margin:auto;	
+	color: black;  
+	text-align:center;	
+	border: 1px solid black;
+	padding: 10px;
+}
+#james
+{	
+	font-size: 50px;
+	margin: 0;
+    padding-bottom: 0px;
+}
+#tab-name
+{
+	width: 610px;
+	height: 70px;
+	position:relative;
+	margin:auto;	
+}
+#tabs
+{	
+	font-style: italic;
+	color: gray;
+	font-size: 10px;
+	text-decoration:none;
+	padding: 10px;
+}
+#nature
+{
+	position:absolute;                  
+    bottom:5px;                          
+    left:0;
+	font-size: 22px;
+	font-style:bold;
+	margin:auto;
+}
+#images 
+{
+	margin:auto;
+	height: 630px;
+	width: 610px;	
+}
+#images-cpr 
+{
+	margin:auto;
+	height: 50px;
+	width: 610px;	
+}
+#logo 
+{
+	padding: 7px;
+	height: 15px;
+	width: 15px;	
+}
+#img 
+{
+	object-fit: cover;
+    object-position: 50%;
+	height: 300px;
+	width: 300px;
+	padding:1px;
+}
+#copyrights
+{
+	margin:auto;
+	width:610px;
+	height:20px;
+	text-align:center;
+	font-size: 8px;
+}
+
+
+
