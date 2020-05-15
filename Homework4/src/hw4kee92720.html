@@ -1,0 +1,179 @@
+<html>
+	<head>
+		<title>Homework 4</title>
+		<style>
+			body
+			{
+				text-align:center;
+				padding : 30px;
+				font-size : 20px;
+			}
+			#button
+			{
+				background-color: white;
+				color: black;
+				border-radius: 2px;
+				padding: 2px;
+				  
+			}
+		</style>
+		<script>
+			function viewJSON(what) 
+			{
+				try
+				{
+					var URL = what.URL.value;
+					if(URL==undefined || URL == null || URL =="")
+					{	alert("ERROR : File name is invalid");
+						return;
+					}
+					function loadJSON(url) {
+						xmlhttp=new XMLHttpRequest();
+						xmlhttp.open("GET",url,false);
+						xmlhttp.send();
+						if(xmlhttp.status== 200)
+						{
+							if(xmlhttp.responseText.length==0)
+							{
+							 alert("ERROR : The file is empty");
+							 jsonObj=null;
+							 return;
+							}
+							else
+							{
+								jsonObj= JSON.parse(xmlhttp.responseText);					
+								return jsonObj;
+							}
+						}
+						else if(xmlhttp.status== 404)
+						{
+							alert("ERROR : File not found");
+							 jsonObj=null;
+							 return;
+						}
+						else
+						{
+							alert("ERROR : File not found");
+							return;
+						}
+					}
+					jsonObj = loadJSON(URL);
+					if(jsonObj==null)
+					{
+						return;
+					}
+					jsonObj.onload=generateHTML(jsonObj);
+					if(html_text==null)
+					{
+						return;
+					}
+					hWin = window.open("", "Assignment4", "height=1000,width=1000");
+					hWin.document.write(html_text);
+					hWin.document.close();
+				}
+				catch(error)
+				{
+					alert("ERROR : File not found");
+					return;					
+				}				
+			}
+			
+			function generateHTML(jsonObj) 
+			{
+				root=jsonObj.DocumentElement;
+				html_text="<html><head><title>Largest Manufacturers by Production (2017)</title></head><body>";
+				html_text+="<table border='2' align='center' >";
+				if(jsonObj.Mainline.Table.Row==undefined)
+				{
+					alert("ERROR : The file has no rows");
+					html_text=null;
+					return;
+				}
+				rows=jsonObj.Mainline.Table.Row; // an array of rows
+				if(rows.length==0)
+				{
+					alert("ERROR : The file has no rows");
+					html_text=null;
+					return;
+				}
+				rowNodeList=jsonObj.Mainline.Table.Header.Data;
+				html_text+="<tbody>";
+				html_text+="<tr>";
+				x=150; y=150;
+				// output the headers
+				//var header_keys = Object.keys(rowNodeList);
+				for(i=0;i<rowNodeList.length;i++) 
+				{
+					header=rowNodeList[i];					
+					html_text+="<th>"+header+"</th>";
+				}		
+
+				html_text+="</tr>";
+				// output out the values
+				rowCount=0; colCount=0; hubCount=0;
+				for(i=0;i<rows.length;i++) //do for all rows (one per row)
+				{
+					rowNodeList=rows[i]; //get properties of a plane (an object)
+					html_text+="<tr>"; //start a new row of the output table
+					var row_keys = Object.keys(rowNodeList);
+					colCount=0;
+					for(j=0;j<row_keys.length;j++)
+					{
+						prop = row_keys[j];
+						if(rowNodeList[prop]=="")
+							colCount++;
+						if(row_keys[j]=="Logo")
+						{//handle images separately
+							html_text+="<td><img src='"+ rowNodeList[prop] +"' width='"+x+"' height='"+y+"'></td>";
+						}
+						else if(row_keys[j]=="Hubs")
+						{
+							cities=rowNodeList.Hubs.Hub;
+							html_text+="<td><ul>";
+							if(cities.length==0)
+								colCount++;
+							for(k=0;k<cities.length;k++)
+							{
+								if(k==0)
+									html_text+="<li><b>"+ cities[k] +"</b></li>";
+								else
+									html_text+="<li>"+ cities[k] +"</li>";
+							}
+							html_text+="</ul></td>";
+						}
+						else if(row_keys[j]=="HomePage")
+						{
+							html_text+="<td><a href="+ rowNodeList[prop] +">"+rowNodeList[prop]+"</a></td>";
+						}
+						else
+						{
+							html_text+="<td>"+ rowNodeList[prop] +"</td>";
+						}
+					}
+					if(colCount==row_keys.length)
+						rowCount++;					
+					html_text+="</tr>";
+				}
+				if(rowCount==rows.length)
+				{
+					alert("ERROR : The file has no rows");
+					html_text=null;
+					return;
+				}
+				html_text+="</tbody>";
+				html_text+="</table>";
+				html_text+= "</bo" + "<dy> </html>";
+			}
+		</script>
+	</head>
+	<body>
+		<h3>Enter URL for list of tallest buildings JSON File</h3>	
+		<form name="myform" method="POST" id="location">
+		<input type="text" name="URL" maxlength="255" size="25" />
+		<br />
+		<br />
+		<input id="button" type="button" name="submit" value="Submit Query"
+		onClick="viewJSON(this.form)" />
+	</form>
+	</body>
+</html>
