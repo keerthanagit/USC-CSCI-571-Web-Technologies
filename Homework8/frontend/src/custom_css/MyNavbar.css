@@ -1,0 +1,46 @@
+.navbar {
+    background-image: linear-gradient(to right, #142952, #2e5cb8) !important;
+}
+.category {
+    color : rgba(255,255,255,.5) !important;
+    padding: 7px;
+}
+.category.active {
+    color : rgba(255,255,255,.9) !important;
+}
+.category:hover {
+    color : rgba(255,255,255,.75) !important;
+    text-decoration : none;
+}
+.navbar-text {
+     color: rgba(255,255,255,0.9) !important;
+     margin-right: 15px;
+     font-size: 17px;
+     padding : 0 ;
+}
+.react-switch {
+    margin-top : 12px;
+}
+.react-switch-bg {
+    height: 24px !important;
+}
+.react-switch-handle {
+    height: 25px !important;
+    width: 25px !important;
+    top: -1px !important;
+}
+.bmlink {
+    color : white;
+    height : 20px;
+    margin : 15px;
+    cursor : pointer;
+}
+@media only screen and (min-width : 992px)
+{
+    .channel {
+        padding-top : 10px;
+    }
+}
+.nav-row {
+    width : 100%;
+}
