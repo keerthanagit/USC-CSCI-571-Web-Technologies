@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<item
+        android:title="Back"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:id="@+id/detailed_article_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:icon="@drawable/ic_arrow_back_24dp"
+        android:layout_alignParentLeft="true"/>-->
+    <item
+        android:title="Bookmark"
+        android:orderInCategory="100"
+        android:id="@+id/detailed_article_bookmark_unfilled"
+        app:showAsAction="always"
+        android:visible="false"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:icon="@drawable/det_art_bm_unfilled"
+        android:layout_toLeftOf="@+id/detailed_article_twitter"/>
+    <item
+        android:title="Bookmark"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:visible="false"
+        android:id="@+id/detailed_article_bookmark_filled"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:icon="@drawable/det_art_bm_filled"
+        android:layout_toLeftOf="@+id/detailed_article_twitter"/>
+
+    <item
+        android:title="Twitter"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:visible="false"
+        android:id="@+id/detailed_article_twitter"
+        android:layout_width="45dp"
+        android:layout_height="41dp"
+        android:layout_alignParentRight="true"
+        android:icon="@drawable/bluetwitter" />
+
+</menu>

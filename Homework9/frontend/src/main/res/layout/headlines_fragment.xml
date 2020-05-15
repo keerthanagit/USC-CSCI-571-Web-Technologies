@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white">
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        app:tabIndicatorColor="@color/colorPrimaryDark"
+        app:tabTextColor="@color/colorPrimaryDark"
+        app:tabMode="scrollable"
+        android:id="@+id/headlines_navigation">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="WORLD"
+            android:id="@+id/headlines_world"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="BUSINESS"
+            android:id="@+id/headlines_business"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="POLITICS"
+            android:id="@+id/headlines_politics"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="SPORTS"
+            android:id="@+id/headlines_sports"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="TECHNOLOGY"
+            android:id="@+id/headlines_technology"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="SCIENCE"
+            android:id="@+id/headlines_science"/>
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/headlines_viewpager"
+        android:layout_below="@id/headlines_navigation"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+        <!--<androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/headlines_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/headlines_navigation"
+            android:background="@android:color/white"
+            android:padding="4dp"
+            android:scrollbars="vertical" />-->
+    </androidx.viewpager.widget.ViewPager>
+
+
+
+</RelativeLayout>
