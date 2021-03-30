@@ -1,37 +1,19 @@
-## Welcome to GitHub Pages
+## CNN/FOX/Google News API's - Web Application (Homework6)
+A web application that shows latest news articles from CNN, FOX News and Google.It shows a word cloud of frequently used words in the news and can search articles by :
+- Date
+- Category
 
-You can use the [editor on GitHub](https://github.com/keerthanagit/USC-CSCI-571-Web-Technologies/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+## Responsive News Application (Homework8)
+A responsive web application that adjusts itself according to the screen size and shows latest news in several categories with features like :
+- Search for news articles with key words
+- Bookmark the articles
+- Share articles via Facebook, Email and Twitter
+- Comment on articles
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/keerthanagit/USC-CSCI-571-Web-Technologies/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Android News App (Homework9)
+An android application for the latest news with features like :
+- Search for news articles with key words
+- Bookmark the articles
+- Share articles via Facebook, Email and Twitter
+- Weather Card showing the temperature and climate details
+- Trending chart for keywords
